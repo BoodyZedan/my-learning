@@ -1,0 +1,71 @@
+true_calc_finished = True
+#calc core 👇
+def calc_1(number_1,number_2,mark):
+    true_calc_finished = False
+    calc_finished = True
+    if mark == "+":
+        anwser = number_1 + number_2
+        print(f"{number_1} + {number_2} = {anwser}")
+    elif mark == "-":
+        anwser = number_1 - number_2
+        print(f"{number_1} - {number_2} = {anwser}")
+    elif mark == "*":
+        anwser = number_1 * number_2
+        print(f"{number_1} * {number_2} = {anwser}")
+    elif mark == "/":
+        anwser = number_1 / number_2
+        print(f"{number_1} / {number_2} = {anwser}")
+    anwser = number_1
+    y_or_n = input(f"Type 'y' to continue with {anwser}, Type 'n' to start a new calculation: ").lower()
+    if y_or_n == "y":
+        while calc_finished:
+            print("""+
+-
+*
+/""")
+            mark = input("pick a mark: ")
+
+            number_2 = int(input("What is next number?: "))
+            calc_1(number_1, number_2, mark)
+    if y_or_n == "n":
+        true_calc_finished = True
+        while true_calc_finished:
+            number_1 = int(input("What is first number?: "))
+            print("""+
+-
+*
+/""")
+            mark = input("pick a mark: ")
+
+            number_2 = int(input("What is second number?: "))
+            calc_1(number_1, number_2, mark)
+
+
+# calc core 👆
+logo = """
+ _____________________
+|  _________________  |
+| | Pythonista   0. | |  .----------------.  .----------------.  .----------------.  .----------------. 
+| |_________________| | | .--------------. || .--------------. || .--------------. || .--------------. |
+|  ___ ___ ___   ___  | | |     ______   | || |      __      | || |   _____      | || |     ______   | |
+| | 7 | 8 | 9 | | + | | | |   .' ___  |  | || |     /  \     | || |  |_   _|     | || |   .' ___  |  | |
+| |___|___|___| |___| | | |  / .'   \_|  | || |    / /\ \    | || |    | |       | || |  / .'   \_|  | |
+| | 4 | 5 | 6 | | - | | | |  | |         | || |   / ____ \   | || |    | |   _   | || |  | |         | |
+| |___|___|___| |___| | | |  \ `.___.'\  | || | _/ /    \ \_ | || |   _| |__/ |  | || |  \ `.___.'\  | |
+| | 1 | 2 | 3 | | x | | | |   `._____.'  | || ||____|  |____|| || |  |________|  | || |   `._____.'  | |
+| |___|___|___| |___| | | |              | || |              | || |              | || |              | |
+| | . | 0 | = | | / | | | '--------------' || '--------------' || '--------------' || '--------------' |
+| |___|___|___| |___| |  '----------------'  '----------------'  '----------------'  '----------------' 
+|_____________________|
+"""
+
+print(logo)
+number_1 = int(input("What is first number?: "))
+print("""+
+-
+*
+/""")
+mark = input("pick a mark: ")
+
+number_2 = int(input("What is second number?: "))
+calc_1(number_1, number_2, mark)
