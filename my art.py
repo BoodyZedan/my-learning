@@ -1,0 +1,67 @@
+from turtle import *
+import turtle as t
+from random import *
+timmy_tim = t.Turtle("circle")
+timmy_tim.up()
+timmy_tim.goto(-120.0, -100.0)
+timmy_tim.width(10)
+t.colormode(255)
+def random_color():
+    r = randint(0, 255)
+    g = randint(0, 255)
+    b = randint(0, 255)
+    random_color = (r, g, b)
+    return random_color
+timmy_tim.up()
+timmy_tim.bk(19)
+timmy_tim.down()
+timmy_tim.fd(1)
+for i in range(7):
+    for i in range(15):
+        timmy_tim.color(random_color())
+        timmy_tim.up()
+        timmy_tim.fd(19)
+        timmy_tim.down()
+        timmy_tim.fd(1)
+    timmy_tim.lt(90)
+    timmy_tim.up()
+    timmy_tim.fd(19)
+    timmy_tim.down()
+    timmy_tim.fd(1)
+    timmy_tim.lt(90)
+    for i in range(15):
+        timmy_tim.color(random_color())
+        timmy_tim.up()
+        timmy_tim.fd(19)
+        timmy_tim.down()
+        timmy_tim.fd(1)
+    timmy_tim.rt(90)
+    timmy_tim.up()
+    timmy_tim.fd(19)
+    timmy_tim.down()
+    timmy_tim.fd(1)
+    timmy_tim.rt(90)
+for i in range(15):
+    timmy_tim.color(random_color())
+    timmy_tim.up()
+    timmy_tim.fd(19)
+    timmy_tim.down()
+    timmy_tim.fd(1)
+timmy_tim.lt(90)
+timmy_tim.up()
+timmy_tim.fd(19)
+timmy_tim.down()
+timmy_tim.fd(1)
+timmy_tim.lt(90)
+for i in range(15):
+    timmy_tim.color(random_color())
+    timmy_tim.up()
+    timmy_tim.fd(19)
+    timmy_tim.down()
+    timmy_tim.fd(1)
+timmy_tim.rt(90)
+timmy_tim.hideturtle()
+screen = Screen()
+
+screen.exitonclick()
+
